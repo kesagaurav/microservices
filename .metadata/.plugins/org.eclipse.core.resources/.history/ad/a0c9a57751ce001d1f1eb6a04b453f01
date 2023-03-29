@@ -1,0 +1,39 @@
+package com.gaurav.controller;
+
+import java.util.List;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.gaurav.model.Hotel;
+
+import com.gaurav.service.HotelService;
+
+@RestController
+public class HotelController  {
+	@Autowired
+	private HotelService service;
+	@PostMapping("/hotel")
+	public Hotel saveHotel(@RequestBody Hotel s) {
+		// TODO Auto-generated method stub
+		return service.saveHotel(s);
+	}
+
+	@GetMapping("/hotels")
+	public List<Hotel> getAllUsers() {
+		// TODO Auto-generated method stub
+		return service.getAllHotels();
+	}
+
+	@GetMapping("/hotel/{id}")
+	public Hotel getHotels(@PathVariable int id) {
+		// TODO Auto-generated method stub
+		return service.getHotels(id);
+	}
+
+}

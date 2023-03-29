@@ -1,0 +1,15 @@
+package com.gaurav.model;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+public class Rating {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int id;
+	private int hotelid;
+	private int userid;
+	private int rating;
+	private String feedback;
+}

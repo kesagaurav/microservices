@@ -1,0 +1,15 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: HotelService
+  cloud:
+    consul:
+      discovery:
+        hostname:localhost
+      config:
+        enabled: true
+        prefix: config
+        defaultContext: applications
+        profileSeparator: '::'
+        format: YAML

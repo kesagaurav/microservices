@@ -1,0 +1,15 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: UserService
+  cloud:
+    consul:
+      discovery:
+        hostname:localhost
+      config:
+        enabled: true
+        prefix: config
+        defaultContext: applications
+        profileSeparator: '::'
+        format: YAML
