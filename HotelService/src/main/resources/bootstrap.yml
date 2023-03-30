@@ -6,7 +6,7 @@ spring:
   cloud:
     consul:
       discovery:
-        hostname:localhost
+        hostname: localhost
       config:
         enabled: true
         prefix: config

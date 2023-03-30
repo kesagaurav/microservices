@@ -5,6 +5,7 @@ import java.util.List;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.stereotype.Service;
 
 import com.gaurav.model.User;
@@ -14,6 +15,8 @@ import com.gaurav.service.UserService;
 public class UserServiceImpl implements UserService {
 	@Autowired
 	private UserRepo userRepository;
+	@Autowired
+	DiscoveryClient client;
 
 	@Override
 	public com.gaurav.model.User user(com.gaurav.model.User s) {

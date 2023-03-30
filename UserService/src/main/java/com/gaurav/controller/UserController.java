@@ -2,7 +2,7 @@ package com.gaurav.controller;
 
 import java.util.List;
 
-
+import org.hibernate.annotations.Loader;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,6 +13,7 @@ import com.gaurav.model.User;
 import com.gaurav.service.UserService;
 
 @RestController
+//@LoadBalancerClient(name="myLoadBalancer", configuration=)
 public class UserController  {
 	@Autowired
 	private UserService service;
